@@ -47,7 +47,7 @@ If the add-on is not available in the store, you can add this repository manuall
 
 This add-on follows [Semantic Versioning](https://semver.org/). For the latest releases, see the [GitHub releases page](https://github.com/m2sh/ha-addon-chisel/releases).
 
-### Latest Release: v1.0.0
+### Latest Release: v0.0.1
 
 - **Initial release** with full server and client mode support
 - **Multi-architecture support** (aarch64, amd64, armv7)
@@ -58,9 +58,9 @@ This add-on follows [Semantic Versioning](https://semver.org/). For the latest r
 
 The add-on is available as Docker images on GitHub Container Registry:
 
-- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-aarch64`
-- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-amd64`
-- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-armv7`
+- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-aarch64`
+- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-amd64`
+- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-armv7`
 
 Latest versions are tagged as:
 - `ghcr.io/m2sh/ha-addon-chisel:latest-aarch64`

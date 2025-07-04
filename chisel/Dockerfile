@@ -10,7 +10,7 @@ ENV S6_VERBOSITY=1
 
 # Setup base
 ARG BUILD_ARCH=amd64
-ARG CHISEL_VERSION="0.0.1"
+ARG CHISEL_VERSION="1.10.1"
 
 # Debug: Print architecture info
 RUN echo "Building for architecture: ${BUILD_ARCH}" && \
