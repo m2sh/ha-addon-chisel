@@ -1,0 +1,29 @@
+name: Notify Add-on Repository
+
+on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - main
+    paths:
+      - 'chisel/config.yaml'
+      - 'chisel/Dockerfile'
+      - 'chisel/build.yaml'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify add-on repository
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.ADDON_REPO_TOKEN }}" \
+            https://api.github.com/repos/m2sh/ha-addons/dispatches \
+            -d '{
+              "event_type": "addon-update",
+              "client_payload": {
+                "addon": "chisel"
+              }
+            }' 
