@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [aarch64, amd64, armv7]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,13 +23,13 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./chisel
-          platforms: linux/amd64
+          platforms: linux/${{ matrix.arch }}
           push: false
           load: true
-          tags: chisel:test
+          tags: chisel:test-${{ matrix.arch }}
           build-args: |
-            BUILD_FROM=ghcr.io/hassio-addons/base/amd64:18.0.2
-            BUILD_ARCH=amd64
+            BUILD_FROM=ghcr.io/hassio-addons/base/${{ matrix.arch }}:18.0.2
+            BUILD_ARCH=${{ matrix.arch }}
             BUILD_DATE=${{ github.event.head_commit.timestamp }}
             BUILD_DESCRIPTION="Chisel Home Assistant Add-on"
             BUILD_NAME="Chisel"

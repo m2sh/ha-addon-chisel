@@ -28,11 +28,14 @@ esac
 
 # Download the chisel binary
 echo "Downloading Chisel v${chiselRelease} for ${arch}..."
-wget -O /usr/bin/chisel "https://github.com/jpillora/chisel/releases/download/v${chiselRelease}/chisel_${chiselRelease}_linux_${arch}.gz"
+wget -O /tmp/chisel.gz "https://github.com/jpillora/chisel/releases/download/v${chiselRelease}/chisel_${chiselRelease}_linux_${arch}.gz"
 
 # Extract the gzipped binary
 echo "Extracting Chisel binary..."
-gunzip /usr/bin/chisel
+gunzip /tmp/chisel.gz
+
+# Move the extracted binary to the correct location
+mv /tmp/chisel /usr/bin/chisel
 
 # Make the downloaded binary executable
 chmod +x /usr/bin/chisel
