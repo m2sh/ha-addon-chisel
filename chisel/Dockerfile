@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:18.0.2
+ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV S6_VERBOSITY=1
 
 # Setup base
-ARG BUILD_ARCH=amd64
+ARG BUILD_ARCH
 ARG CHISEL_VERSION="1.10.1"
 
 # Copy root filesystem

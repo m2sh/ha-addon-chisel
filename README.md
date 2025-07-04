@@ -4,10 +4,6 @@
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
-[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
-
-[![Discord][discord-shield]][discord]
-
 _Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured via SSH. This add-on provides a secure way to tunnel your Home Assistant instance through firewalls and NAT._
 
 ## About
