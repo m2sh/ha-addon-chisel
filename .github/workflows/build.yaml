@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main, master ]
 
+# Add permissions for consistency
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
