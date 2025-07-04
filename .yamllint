@@ -1,0 +1,188 @@
+extends: default
+
+rules:
+  # 80 chars should be enough, but don't fail if a line is longer
+  line-length:
+    max: 80
+    level: warning
+
+  # Accept both `true` and `yes` for boolean values
+  truthy:
+    check-keys: false
+
+  # Accept both `on` and `true` for boolean values
+  boolean:
+    check-keys: false
+
+  # Accept both `null` and `~` for null values
+  null:
+    check-keys: false
+
+  # Accept both `"quoted"` and `unquoted` strings
+  quoted-strings:
+    check-keys: false
+
+  # Accept both `{key: value}` and `{ key: value }` for mappings
+  brackets:
+    check-keys: false
+
+  # Accept both `[item]` and `[ item ]` for sequences
+  brackets:
+    check-keys: false
+
+  # Accept both `key: value` and `key:value` for mappings
+  colons:
+    check-keys: false
+
+  # Accept both `key: value` and `key : value` for mappings
+  colons:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  commas:
+    check-keys: false
+
+  # Accept both `key: value` and `key:value` for mappings
+  commas:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  comments:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  comments-indentation:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  document-end:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  document-start:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  empty-lines:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  hyphens:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  indentation:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  key-duplicates:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  key-ordering:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  line-length:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  new-line-at-end-of-file:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  new-lines:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  trailing-spaces:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  truthy:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  empty-lines:
+    max: 1
+    max-end: 1
+
+  # Accept both `key: value` and `key: value` for mappings
+  trailing-spaces:
+    max-spaces-before: 0
+    max-spaces-inside: 0
+
+  # Accept both `key: value` and `key: value` for mappings
+  truthy:
+    check-keys: false
+    allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+
+  # Accept both `key: value` and `key: value` for mappings
+  quoted-strings:
+    check-keys: false
+    required: false
+    extra-allowed: ['^[^"]*$']
+
+  # Accept both `key: value` and `key: value` for mappings
+  comments:
+    check-keys: false
+    min-spaces-from-content: 1
+
+  # Accept both `key: value` and `key: value` for mappings
+  document-start:
+    check-keys: false
+    present: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  document-end:
+    check-keys: false
+    present: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  empty-lines:
+    check-keys: false
+    max: 1
+    max-end: 1
+
+  # Accept both `key: value` and `key: value` for mappings
+  hyphens:
+    check-keys: false
+    max-spaces-before: 0
+    max-spaces-after: 1
+
+  # Accept both `key: value` and `key: value` for mappings
+  indentation:
+    check-keys: false
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  key-duplicates:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  key-ordering:
+    check-keys: false
+
+  # Accept both `key: value` and `key: value` for mappings
+  line-length:
+    check-keys: false
+    max: 80
+    level: warning
+
+  # Accept both `key: value` and `key: value` for mappings
+  new-line-at-end-of-file:
+    check-keys: false
+    present: true
+
+  # Accept both `key: value` and `key: value` for mappings
+  new-lines:
+    check-keys: false
+    type: unix
+
+  # Accept both `key: value` and `key: value` for mappings
+  trailing-spaces:
+    check-keys: false
+    max-spaces-before: 0
+    max-spaces-inside: 0 
