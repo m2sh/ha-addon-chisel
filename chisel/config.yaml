@@ -12,6 +12,7 @@ arch:
   - aarch64
   - amd64
   - armv7
+image: "ghcr.io/m2sh/ha-addon-chisel/{arch}"
 map:
   - addon_config:rw
 options:

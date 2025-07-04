@@ -33,6 +33,40 @@ The installation of this add-on is pretty straightforward and not different in c
 3. Configure the add-on according to your needs.
 4. Start the add-on.
 
+### Manual Installation
+
+If the add-on is not available in the store, you can add this repository manually:
+
+1. In Home Assistant, go to **Settings** → **Add-ons** → **Add-on Store**
+2. Click the three dots in the top right corner
+3. Select **Repositories**
+4. Add this repository URL: `https://github.com/m2sh/ha-addon-chisel`
+5. Install the "Chisel" add-on from the new repository
+
+## Releases
+
+This add-on follows [Semantic Versioning](https://semver.org/). For the latest releases, see the [GitHub releases page](https://github.com/m2sh/ha-addon-chisel/releases).
+
+### Latest Release: v1.0.0
+
+- **Initial release** with full server and client mode support
+- **Multi-architecture support** (aarch64, amd64, armv7)
+- **Comprehensive configuration options**
+- **S6-overlay service management**
+
+### Docker Images
+
+The add-on is available as Docker images on GitHub Container Registry:
+
+- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-aarch64`
+- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-amd64`
+- `ghcr.io/m2sh/ha-addon-chisel:1.0.0-armv7`
+
+Latest versions are tagged as:
+- `ghcr.io/m2sh/ha-addon-chisel:latest-aarch64`
+- `ghcr.io/m2sh/ha-addon-chisel:latest-amd64`
+- `ghcr.io/m2sh/ha-addon-chisel:latest-armv7`
+
 ## Configuration
 
 ### Server Mode
