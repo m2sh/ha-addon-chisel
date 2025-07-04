@@ -46,6 +46,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}/${{ matrix.arch }}:${{ steps.version.outputs.VERSION }}
+            ghcr.io/${{ github.repository }}/${{ matrix.arch }}:v${{ steps.version.outputs.VERSION }}
             ghcr.io/${{ github.repository }}/${{ matrix.arch }}:latest
           build-args: |
             BUILD_FROM=ghcr.io/hassio-addons/base/${{ matrix.arch }}:18.0.2
