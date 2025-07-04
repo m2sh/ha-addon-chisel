@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build ARMv7 (Debug)
 
 on:
   push:
@@ -7,33 +7,29 @@ on:
     branches: [ main, master ]
 
 jobs:
-  build:
+  build-armv7:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        arch: [aarch64, amd64, armv7]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-        if: matrix.arch == 'armv7'
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker image
+      - name: Build Docker image (ARMv7)
         uses: docker/build-push-action@v5
         with:
           context: ./chisel
-          platforms: linux/${{ matrix.arch == 'armv7' && 'arm/v7' || matrix.arch }}
+          platforms: linux/arm/v7
           push: false
           load: true
-          tags: chisel:test-${{ matrix.arch }}
+          tags: chisel:test-armv7-debug
           build-args: |
-            BUILD_FROM=ghcr.io/hassio-addons/base/${{ matrix.arch }}:18.0.2
-            BUILD_ARCH=${{ matrix.arch }}
+            BUILD_FROM=ghcr.io/hassio-addons/base/armv7:18.0.2
+            BUILD_ARCH=armv7
             BUILD_DATE=${{ github.event.head_commit.timestamp }}
             BUILD_DESCRIPTION="Chisel Home Assistant Add-on"
             BUILD_NAME="Chisel"
