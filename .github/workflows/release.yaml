@@ -45,8 +45,8 @@ jobs:
           platforms: linux/${{ matrix.arch == 'armv7' && 'arm/v7' || matrix.arch }}
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}-${{ matrix.arch }}
-            ghcr.io/${{ github.repository }}:latest-${{ matrix.arch }}
+            ghcr.io/${{ github.repository }}/${{ matrix.arch }}:${{ steps.version.outputs.VERSION }}
+            ghcr.io/${{ github.repository }}/${{ matrix.arch }}:latest
           build-args: |
             BUILD_FROM=ghcr.io/hassio-addons/base/${{ matrix.arch }}:18.0.2
             BUILD_ARCH=${{ matrix.arch }}
@@ -96,8 +96,8 @@ jobs:
             See the [README.md](https://github.com/${{ github.repository }}/blob/main/README.md) for detailed configuration options.
             
             ### Docker Images
-            - `ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}-aarch64`
-            - `ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}-amd64`
-            - `ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}-armv7`
+            - `ghcr.io/${{ github.repository }}/aarch64:${{ steps.version.outputs.VERSION }}`
+            - `ghcr.io/${{ github.repository }}/amd64:${{ steps.version.outputs.VERSION }}`
+            - `ghcr.io/${{ github.repository }}/armv7:${{ steps.version.outputs.VERSION }}`
           draft: false
           prerelease: false 

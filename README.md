@@ -58,14 +58,14 @@ This add-on follows [Semantic Versioning](https://semver.org/). For the latest r
 
 The add-on is available as Docker images on GitHub Container Registry:
 
-- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-aarch64`
-- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-amd64`
-- `ghcr.io/m2sh/ha-addon-chisel:0.0.1-armv7`
+- `ghcr.io/m2sh/ha-addon-chisel/aarch64:0.0.1`
+- `ghcr.io/m2sh/ha-addon-chisel/amd64:0.0.1`
+- `ghcr.io/m2sh/ha-addon-chisel/armv7:0.0.1`
 
 Latest versions are tagged as:
-- `ghcr.io/m2sh/ha-addon-chisel:latest-aarch64`
-- `ghcr.io/m2sh/ha-addon-chisel:latest-amd64`
-- `ghcr.io/m2sh/ha-addon-chisel:latest-armv7`
+- `ghcr.io/m2sh/ha-addon-chisel/aarch64:latest`
+- `ghcr.io/m2sh/ha-addon-chisel/amd64:latest`
+- `ghcr.io/m2sh/ha-addon-chisel/armv7:latest`
 
 ## Configuration
 
