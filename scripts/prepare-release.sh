@@ -63,12 +63,16 @@ print_status "Updating version in config.yaml"
 sed -i.bak "s/version: .*/version: $VERSION/" chisel/config.yaml
 rm chisel/config.yaml.bak
 
+print_status "Updating build.yaml label"
+sed -i.bak "s/io.hass.version:.*/io.hass.version: \"$VERSION\"/" chisel/build.yaml
+rm chisel/build.yaml.bak
+
 # Note: CHISEL_VERSION in Dockerfile should remain as the actual Chisel binary version
 # (currently 1.10.1), not the addon version
 
 # Commit the version changes
 print_status "Committing version changes"
-git add chisel/config.yaml
+git add chisel/config.yaml chisel/build.yaml
 git commit -m "chore: bump version to $VERSION"
 
 # Create and push the tag
