@@ -80,7 +80,7 @@ if [ -d "/etc/cont-init.d" ]; then
     rm -rf /etc/cont-init.d
 fi
 
-# Remove s-6 legacy/deprecated (and not needed) services (if they exist)
+# Remove S6 legacy/deprecated (and not needed) services (if they exist)
 if [ -f "/package/admin/s6-overlay/etc/s6-rc/sources/base/contents.d/legacy-cont-init" ]; then
     echo "Removing legacy-cont-init file"
     rm /package/admin/s6-overlay/etc/s6-rc/sources/base/contents.d/legacy-cont-init
