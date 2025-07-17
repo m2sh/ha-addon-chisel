@@ -6,3 +6,4 @@ build_from:
 labels:
   io.hass.type: addon
   io.hass.version: "0.0.5"
+

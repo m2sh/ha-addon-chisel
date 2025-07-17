@@ -154,3 +154,4 @@ schema:
     type: "bool"
     name: "Verbose Logging"
     description: "Enable verbose logging for debugging."
+
